@@ -1,0 +1,32 @@
+				*** C# ESSENTIALS ***
+
+
+			*** Declaraciòn implìcita de variables *** 
+
+
+	int edadPersona1;
+            int edadPersona2;
+            int edadPersona3;
+            int edadPersona4;
+
+            // UNIFICACIÒN DE DECLARACION DE VARIABLES A UNA LÌNEA (DECLARACIÒN IMPLICITA DE VARIABLES)
+            edadPersona1 = edadPersona2 = edadPersona3 = edadPersona4 = 23;
+
+
+
+			*** Declaraci+on explicita de variables ***
+
+
+	conversiòn de un tipo de variable a otro.
+
+
+	double temperature = 33.5;
+	int temperatureNormal;
+
+	temperatureNormal = (int) temperature;
+
+
+				*** Conversiòn de texto a numeral  ***
+
+
+
