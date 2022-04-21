@@ -60,6 +60,26 @@ namespace Variables
             Console.WriteLine(aux);
             Console.WriteLine("fin");
 
+
+            // CONSTANTES
+
+            const int VALOR = 6; // CONSTANTE DECLARADA E INICIALIZADA 
+
+            const int VALAND = 7;   
+
+            Console.WriteLine("Valor constante :{0} {1}",VALOR, VALAND); // IMPRESIÒN DE MÙLTIPLES CONSTANTES COMO PARÀMETROS
+
+
+            // EJEMPLO DE PI CON CONSTANTES
+
+            const double PI = 3.1416;
+
+            Console.WriteLine("Indique radio");
+            double radio = double.Parse(Console.ReadLine());
+
+            //double calculo = PI * radio * radio;
+            double calculo = Math.Pow(radio, 2) * PI;
+            Console.WriteLine("El valor es igual a {0}", calculo);
         }
     }
 }
