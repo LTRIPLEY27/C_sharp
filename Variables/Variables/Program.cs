@@ -58,6 +58,7 @@ namespace Variables
             string val2 = "hola";
             string aux = String.Concat(Console.ReadLine(), val2);
             Console.WriteLine(aux);
+            Console.WriteLine("fin");
 
         }
     }
