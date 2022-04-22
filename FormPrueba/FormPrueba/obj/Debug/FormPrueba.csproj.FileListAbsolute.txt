@@ -1,0 +1,10 @@
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\bin\Debug\FormPrueba.exe.config
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\bin\Debug\FormPrueba.exe
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\bin\Debug\FormPrueba.pdb
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.csproj.AssemblyReference.cache
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.Form1.resources
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.Properties.Resources.resources
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.csproj.GenerateResource.cache
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.csproj.CoreCompileInputs.cache
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.exe
+C:\Users\mcalzadi\source\repos\C_sharp\FormPrueba\FormPrueba\obj\Debug\FormPrueba.pdb

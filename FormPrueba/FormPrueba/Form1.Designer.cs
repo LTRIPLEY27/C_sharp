@@ -30,6 +30,7 @@ namespace FormPrueba
         private void InitializeComponent()
         {
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnLitle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -43,11 +44,21 @@ namespace FormPrueba
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
+            // btnLitle
+            // 
+            this.btnLitle.Location = new System.Drawing.Point(228, 67);
+            this.btnLitle.Name = "btnLitle";
+            this.btnLitle.Size = new System.Drawing.Size(75, 23);
+            this.btnLitle.TabIndex = 1;
+            this.btnLitle.Text = "mini button";
+            this.btnLitle.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLitle);
             this.Controls.Add(this.btnLogin);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -58,6 +69,7 @@ namespace FormPrueba
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnLitle;
     }
 }
 
