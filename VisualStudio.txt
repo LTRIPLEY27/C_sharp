@@ -1,0 +1,11 @@
+				*** VISUAL STUDIO TOOLS ***
+
+
+- Source location:
+
+	Permite crear espacios de trabajos con ubicaciòn especìfica.
+
+
+
+
+

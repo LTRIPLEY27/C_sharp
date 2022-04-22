@@ -29,4 +29,6 @@
 				*** Conversiòn de texto a numeral  ***
 
 
+int nume = int.ParseInt("indique nùmero");
+
 
