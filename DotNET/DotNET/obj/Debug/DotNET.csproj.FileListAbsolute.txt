@@ -1,0 +1,7 @@
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\bin\Debug\DotNET.exe.config
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\bin\Debug\DotNET.exe
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\bin\Debug\DotNET.pdb
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\obj\Debug\DotNET.csproj.AssemblyReference.cache
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\obj\Debug\DotNET.csproj.CoreCompileInputs.cache
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\obj\Debug\DotNET.exe
+C:\Users\mcalzadi\source\repos\C_sharp\DotNET\DotNET\obj\Debug\DotNET.pdb
