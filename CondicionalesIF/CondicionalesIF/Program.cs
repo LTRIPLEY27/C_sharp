@@ -15,8 +15,15 @@ namespace CondicionalesIF
             age = int.Parse(Console.ReadLine());
             Console.WriteLine(ageEvaluator(age));
 
+            // ELSE IF
+            Console.WriteLine(healthAge(age));
+
         }
 
         static String ageEvaluator(int age) => age < 18 ? "Eres menor de edad " : "Eres mayor de edad ";
+
+        // ELSE IF CON TERNARIO
+        static String healthAge(int age) => age < 18 ? "Eres un niño" : (age > 18 && age < 25 ? "Eres joven" : "Eres un adulto");
+
     }
 }
