@@ -32,3 +32,34 @@
 int nume = int.ParseInt("indique nùmero");
 
 
+				*** CONDICIONAL TERNARIO ***
+
+- C# Admite la funcionalidad y los valores ternarios ejm:
+
+	If ternario :
+
+		static String ageEvaluator(int age) => age < 18 ? "Eres menor de edad " : "Eres mayor de edad ";
+
+	Else If ternario :
+											-- CONDICIONAL TERNARIO DENTRO DE UN TERNARIO --
+		  static String healthAge(int age) => age < 18 ? "Eres un niño" : (age > 18 && age < 25 ? "Eres joven" : "Eres un adulto");
+
+
+
+				*** SINTÀXIS DEL SWITCH (DIFIERE DE JAVA) ***
+
+
+- Cada expresiòn constante ha de ser ùnica.
+- Solo se puede usar switch para : 
+	- int
+	- char
+	- String
+
+	** Float y Double no se pueden ejecutar en switch, ùnicamente en If **
+- Los case solo pueden contener expresiones constantes
+- Todos los case deben llevar su break
+	- Se puede utilizar return y throw
+
+
+				***  DEBUG EN VISUAL STUDIO ***
+
