@@ -1,6 +1,12 @@
 				*** C# ESSENTIALS ***
 
 
+				*** IMPORTANT LINK ***
+
+		https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0
+
+					  ***
+
 			*** Declaraciòn implìcita de variables *** 
 
 
@@ -63,3 +69,397 @@ int nume = int.ParseInt("indique nùmero");
 
 				***  DEBUG EN VISUAL STUDIO ***
 
+
+
+
+
+int result = Fibonacci(5);
+Console.WriteLine(result);
+
+static int Fibonacci( int n ) 
+{
+    int n1 = 0;
+    int n2 = 1;
+    int sum;
+
+    for( int i = 2; i <= n; i++)
+    {
+        sum = n1 + n2;
+        n1 = n2;
+        n2 = sum;
+    }
+
+    return n == 0 ? n1 : n2;
+}
+
+
+				*** DISTINCIÒN DE DIRECTORIOS EN C# ***
+
+
+- Ruta de acceso al directorio :
+
+	Directory.GetCurrentDirectory.   =>   Ubica el directorio.
+
+
+- Constantes de archivos :
+
+	System.Environment.SpecialFolder especifica constantes para recuperar rutas de acceso a carpetas especiales del sistema.
+
+
+
+				*** CLASE PATH  ***
+
+
+- Las rutas son un tema que surge tan a menudo que .NET incluye una clase denominada Path dedicada de forma concreta a trabajar con ellas.
+
+	La clase Path se encuentra en el espacio de nombres System.IO de .NET y no es necesario instalarla.
+	
+La clase Path funciona con el concepto de rutas de acceso de archivos y carpetas, que son simplemente cadenas. Puede usar la clase Path para crear de forma automática rutas correctas para sistemas operativos específicos.
+
+Por ejemplo, si quiere obtener la ruta de acceso a la carpeta stores/201, puede usar la función Path.Combine para ello.
+
+
+ Copiar
+	Console.WriteLine(Path.Combine("stores","201")); // outputs: stores/201
+	Recuerde que tendría que usar la clase Path.Combine o Path.DirectorySeparatorChar en lugar de cadenas codificadas de forma rígida porque el programa podría ejecutarse en muchos sistemas operativos diferentes. La clase Path siempre aplicará el formato adecuado a las rutas de acceso correspondientes a cualquier sistema operativo en el que se ejecute.
+
+
+
+- Clase Directory :
+
+	Manipula de todas las formas archivos.
+
+	ejm :
+
+		-	Directory.CreateDirectory  =>  Crea un directorio.
+
+
+		-	Directory.Exist("ARchivo"); => Verifica la existencia d eun directorio.
+
+		-	File.WriteAllText()  =>  Crea un archivo segùn ruta.
+
+	
+		-	File.ReadAllText() => Lectura de archivos.
+
+
+
+- Plantilla REST 
+
+
+	terminal : dotnet new webapi -f net6.0
+
+
+
+			*** USO DE NAMESPACES C# ***
+
+
+	Un espacio de nombres elimina la ambigüedad de los nombres de clase. En el módulo “Llamada a métodos de la biblioteca de clases .NET mediante C#”,
+	 aprendió que hay tantas clases en la biblioteca de clases .NET que puede haber dos clases con el mismo nombre. El espacio de nombres garantiza que 
+	pueda indicar al compilador con qué clase y con qué método quiere trabajar al especificar también un espacio de nombres.
+
+
+			
+			*** USING NAMESPACE PARA ELIMINAR DUALIDAD DE NOMBRES DE CLASE ***
+
+
+	La instrucción “using” ayuda al compilador a resolver espacios de nombres, pero con menos pulsaciones de teclas
+	Una opción mejor sería agregar una instrucción using. La instrucción using se agrega en la parte superior de un archivo de código. 
+	Resuelve los nombres de clase que se usan en el archivo, puesto que indica al compilador que examine la lista de espacios de nombres 
+	para buscar todos los nombres de clase.
+
+
+
+int hero = 10;
+int monster = 10;
+
+Random dice = new Random();
+
+do
+{
+    int roll = dice.Next(1, 11);
+    monster -= roll;
+    Console.WriteLine($"Monster was damaged and lost {roll} health and now has {monster} health.");
+
+    if (monster <= 0) continue;
+
+    roll = dice.Next(1, 11);
+    hero -= roll;
+    Console.WriteLine($"Hero was damaged and lost {roll} health and now has {hero} health.");
+
+} while (hero > 0 && monster > 0);
+
+Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
+
+
+
+			///////////////////// REVISAR  /////////////////////////
+
+
+/*string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+
+decimal total = 0m;
+string message = "";
+
+foreach (var value in values)
+{
+    decimal number;
+    if (decimal.TryParse(value, out number))
+    {
+        total += number;
+    }
+    else
+    {
+        message += value;
+    }
+}
+
+Console.WriteLine($"Message: {message}");
+Console.WriteLine($"Total: {total}");*/
+
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+float value = 0f;
+string x = "";
+float num;
+for ( int i = 0; i < values.Length; i++ ) {
+    if(float.TryParse( values[i], out num )) {
+        value += num;
+    } else {
+        x += values[i];
+    }
+}
+
+Console.WriteLine($"Message: {x}");
+Console.WriteLine($"Total: {value}");
+
+
+
+			//////////////////////////////////////////////
+
+
+ 			*** Aplicación de formato a valores de moneda ***
+
+	- El formato compuesto y la interpolación de cadenas se pueden
+	  usar para dar formato a valores que se muestran en función de un idioma y una referencia
+	  cultural concretos. En el ejemplo siguiente, se usa el especificador de formato de moneda :C para presentar
+	  las variables price y discount como moneda.
+
+	  Observe que si se agrega :C a los tokens incluidos entre las llaves, se aplica formato de moneda al número, independientemente de si se usa int o decimal.
+
+
+			*** Aplicación de formato a números ***
+
+
+	- Cuando se trabaja con datos numéricos, es posible que quiera dar formato al número para facilitar la lectura mediante la inclusión de puntos para delimitar miles, millones, miles de millones, etc.
+
+	- El especificador de formato numérico N permite hacer esto.
+
+	- De forma predeterminada, el especificador de formato numérico N solo muestra dos dígitos después del separador decimal.
+
+	- Si quiere mostrar más precisión, puede agregar un número después del especificador. En el código siguiente se mostrarán cuatro dígitos después del separador decimal mediante el especificador N4.
+
+
+	Métodos que agregan espacios en blanco para fines de formato (PadLeft(), PadRight())
+
+	Métodos que comparan dos cadenas o facilitan la comparación (Trim(), TrimStart(), TrimEnd(), GetHashcode(), la propiedad Length)
+
+	Métodos que ayudan a determinar lo que está dentro de una cadena, o incluso a recuperar solo una parte de la cadena (Contains(), StartsWith(), EndsWith(), Substring())
+
+	Métodos que cambian el contenido de la cadena mediante el reemplazo, la inserción o la eliminación de elementos (Replace(), Insert(), Remove())
+
+	Métodos que convierten una cadena en una matriz de cadenas o caracteres (Split(), ToCharArray())
+
+
+
+
+				////// //////////////////////////////////////
+
+
+
+				*** MODEL - VIEW - CONTROLLER (MVC)  ***
+
+
+	- MODEL :
+
+		Lògica de la aplicaciòn.
+
+	- VIEW :
+
+		Interfaz del usuario.
+
+	- CONTROLLER :
+
+		Maneja los requerimientos del usuario y actua entre la VIEW Y EL MODEL.
+
+
+					    *** API REST ***
+
+
+- Agregar datos
+
+	Para empezar, necesitará algunos datos. Para almacenar y administrar los datos, usará un almacén en memoria.
+
+	Cree el archivo Db.cs y asígnele el contenido siguiente.
+
+
+- Conexión de los datos a las rutas
+	Para conectar el almacén en memoria a la API:
+
+	Agregue el espacio de nombres. Esta incorporación es tan sencilla como agregar la instrucción using adecuada.
+	Configure las rutas. Asegúrese de agregar todas las asignaciones de rutas necesarias para crear, leer, actualizar y eliminar.
+	Invóquelo en las rutas. Por último, debe llamar al almacén en memoria por cada ruta y pasar cualquier parámetro o cuerpo de la solicitud, si procede.
+
+
+
+
+
+
+namespace PizzaStore.DB;
+
+using System;
+
+public record Pizza
+{	// DEFINICIÒN OBJETO PIZZA
+	public int Id { get; set; }
+	public string ? Name { get; set; }
+}
+
+public class PizzaDB
+{
+	private static List<Pizza> _pizzas = new List<Pizza>() 
+	{// INSTANCIAS PIZZA EN LA BASE DE DATOS
+		new Pizza() { Id = 1, Name = "Montemagno, Pizza shaped like a great mountain"},
+		new Pizza() { Id = 2, Name = "Donnatello"},
+		new Pizza() { Id = 3, Name = "DaVinci Pizzas"},
+		new Pizza() { Id = 4, Name = "Michelangello"},
+		new Pizza() { Id = 5, Name = "Rafaelle"},
+	};
+
+	//Mètodo getter que retorna la lista de pizzas
+	// GET API REGISTRO DE PIZZAS
+	public static List<Pizza> GetPizzas()
+    {
+		return _pizzas;
+    }
+
+	// MÈTODO CON PARÀMETROS PARA  UBICAR ID ESPECÌFICO
+	public static Pizza? GetPizza(int id)
+    {
+        return _pizzas.SingleOrDefault(pizza => pizza.Id == id);
+    }
+	
+
+	// MÈTODO PUT PARA CREAR UN NUEVO ELEMENTO Y ADHERIR A LA DATABASE
+	public static Pizza? CreatePizza(Pizza pizza)
+    {
+		_pizzas.Add(pizza);
+		return pizza;
+    }
+
+	// UPDATE, CAMBIA DE FORMA CONSSTENTE A SPRING !!!
+
+	public static Pizza UpdatePizza(Pizza update)
+    {// UPDATE *** ADMITE LAMBDAS Y SELECTS PARA FILTRAR Y ACTUALIZAR EL ELEMENTO ESPECÌFICO ***
+		_pizzas = _pizzas.Select( pizza =>
+        {
+			if (pizza.Id == update.Id)
+            {
+				pizza.Name = update.Name;
+            }
+			return pizza;
+        }).ToList();
+		return update;
+    }
+
+	public static void RemovePizza(int id)
+    {
+		_pizzas = _pizzas.FindAll(pizza => pizza.Id == id).ToList();
+    }
+}
+
+
+
+						*** ENTITY FRAMEWORK ***
+
+
+- Conserva los datos de la aplicaciòn.
+
+	- Información sobre EF Core
+
+	EF Core es una tecnología de acceso a datos ligera, extensible, de código abierto y multiplataforma para aplicaciones .NET.
+
+	EF Core puede actuar como asignador relacional de objetos, que hace lo siguiente:
+
+	Permitir a los desarrolladores de .NET trabajar con una base de datos mediante objetos .NET.
+	Permite prescindir de la mayor parte del código de acceso a datos que normalmente es necesario escribir.
+	EF Core admite un gran número de bases de datos populares, como SQLite, MySQL, PostgreSQL, Oracle y Microsoft SQL Server.
+
+	- El modelo
+
+	Con EF Core, el acceso a datos se realiza utilizando un modelo. Un modelo se compone de clases de entidad y un objeto de contexto que representa una sesión con la base de datos. Este objeto de contexto permite consultar y guardar datos.
+
+
+	- Clase de entidad
+	
+	En este escenario, va a implementar una API de administración de un negocio de pizzas, por lo que usará una clase de entidad Pizza. Las pizzas del negocio tendrán un nombre y una descripción. También necesitarán un id. para permitir que la API y la base de datos las identifiquen. La clase de entidad Pizza que va a usar en la aplicación identifica las pizzas:
+
+	ejm :
+
+		namespace PizzaStore.Models 
+		{
+  			public class Pizza
+  		   {
+      			public int Id { get; set; }
+     			public string? Name { get; set; }
+      			public string? Description { get; set; }
+  		   }
+		}
+
+
+	- Clase de contexto
+
+	Esta aplicación solo tiene una clase de entidad, pero la mayoría de las aplicaciones tendrán varias. La clase de contexto es responsable de consultar y guardar datos en las clases de entidad, así como de crear y administrar la conexión de la base de datos.
+
+
+	- Adición de EF Core al proyecto
+
+	Para almacenar los elementos en la lista de tareas, instale el paquete EntityFrameworkCore.InMemory.
+
+	En la ventana de terminal, introduzca el código siguiente para agregar el paquete InMemory de EF Core:
+
+	- Consola
+
+		Copiar
+		dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 6.0
+
+	Agregue using Microsoft.EntityFrameworkCore; a la parte superior de los archivos Program.cs y Pizza.cs.
+
+	Ahora que ha agregado EF Core al proyecto, puede conectar el código a los datos que desea guardar y hacer consultas. Para realizar este paso, cree una clase PizzaDb. La clase PizzaDb realizará las siguientes tareas:
+
+	Exponer la propiedad Pizzas de la lista de Pizza en la base de datos.
+	Usar UseInMemoryDatabase para conectar el almacenamiento de la base de datos en memoria. Los datos se almacenan aquí mientras se ejecuta la aplicación.
+	Para configurar la base de datos en memoria, agregue el código siguiente a la parte inferior de la clase Pizza.cs (encima del carácter } final):
+
+Copiar
+class PizzaDb : DbContext
+{
+    public PizzaDb(DbContextOptions options) : base(options) { }
+    public DbSet<Pizza> Pizzas { get; set; }
+}
+	
+	DbContext representa una conexión o sesión que se usa para consultar y guardar instancias de entidades en una base de datos.
+
+	Agregue using PizzaStore.Models; a la parte superior del archivo Program.cs.
+
+	En Program.cs, antes de la llamada a AddSwaggerGen, agregue el código siguiente:
+
+
+
+Copiar
+builder.Services.AddDbContext<PizzaDb>(options => options.UseInMemoryDatabase("items"));
+Devolución de una lista de elementos
+Para leer desde una lista de elementos de la lista de pizzas, agregue el código siguiente encima de la llamada a app.Run(); para agregar una ruta "/pizzas":
+
+C#
+
+Copiar
+app.MapGet("/pizzas", async (PizzaDb db) => await db.Pizzas.ToListAsync());
